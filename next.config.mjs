@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/slide-component-library',
+  assetPrefix: '/slide-component-library/',
+  images: {
+    unoptimized: true,
+  },
   webpack: (config, { isServer, webpack }) => {
     if (!isServer) {
       config.resolve.fallback = {
